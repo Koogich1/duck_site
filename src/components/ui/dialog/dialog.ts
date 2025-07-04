@@ -30,7 +30,6 @@ class Dialog extends HTMLElement {
     closeBtn.addEventListener("click", () => this.close());
     dialog.appendChild(closeBtn);
 
-    // Переносим все элементы с slot-ами в нужные места
     const trigger = this.querySelector('[slot="dialogTrigger"]');
     const content = this.querySelector('[slot="content"]');
     const actions = this.querySelector('[slot="actions"]');
@@ -41,11 +40,10 @@ class Dialog extends HTMLElement {
     this.appendChild(backdrop);
     this.appendChild(dialog);
 
-    // Клик по триггеру открывает диалог
     if (trigger) {
       trigger.addEventListener("click", () => this.open());
     }
-    // Клик по фону закрывает диалог
+
     backdrop.addEventListener("click", () => this.close());
   }
 

@@ -38,7 +38,7 @@ class Button extends HTMLElement {
     const button = this._button;
     if (!button) return;
     if (name === "variant") {
-      ["primary", "secondary", "outline"].forEach((cls) => button.classList.remove(cls));
+      ["primary", "secondary", "outline", "menu-tab"].forEach((cls) => button.classList.remove(cls));
       if (newValue) button.classList.add(newValue);
     }
     if (name === "size") {

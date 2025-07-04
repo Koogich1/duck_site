@@ -46,6 +46,9 @@ window.addEventListener('DOMContentLoaded', () => {
         </div>
       </custom-dialog>
       <custom-input placeholder="Введите текст" value="" classname="custom-class"></custom-input>
+      <custom-button variant="menu-tab" size="default">
+        <span slot="text">Открыть диалог</span>
+      </custom-button>
     </section>
   `;
 

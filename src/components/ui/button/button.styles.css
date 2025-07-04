@@ -56,6 +56,61 @@
   color: white;
 }
 
+.btn.menu-tab {
+  background: transparent;
+  border: none;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 0;
+  box-shadow: none;
+  position: relative;
+  min-width: unset;
+  height: 40px;
+  padding: 0 18px;
+  transition: color 0.18s;
+}
+.btn.menu-tab:hover {
+  color: #2581EB;
+  background: transparent;
+}
+
+.btn.menu-tab::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 0;
+  height: 3px;
+  border-radius: 2px;
+  background: #2581EB;
+  opacity: 0;
+  transform: scaleX(0.5);
+  transition: opacity 0.18s, transform 0.18s;
+  pointer-events: none;
+}
+.btn.menu-tab:hover::after,
+.btn.menu-tab.active::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.btn.menu-tab.active {
+  color: #2581EB;
+}
+.btn.menu-tab.active::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 0;
+  height: 3px;
+  border-radius: 2px;
+  background: #2581EB;
+}
+
+
 /* Размер по умолчанию */
 .btn.default {
   padding: 10px 20px;
