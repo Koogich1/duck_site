@@ -1,4 +1,4 @@
-import styles from "./button.styles.css?inline";
+import styles from "./buttonStyles.css?inline";
 
 if (!document.head.querySelector('style[data-custom-button]')) {
   const styleElement = document.createElement("style");
@@ -22,6 +22,19 @@ class Button extends HTMLElement {
     if (text) button.appendChild(text);
 
     this.appendChild(button);
+
+    if (this.classList.contains('active')) {
+      button.classList.add('active');
+    }
+    
+    const observer = new MutationObserver(() => {
+      if (this.classList.contains('active')) {
+        button.classList.add('active');
+      } else {
+        button.classList.remove('active');
+      }
+    });
+    observer.observe(this, { attributes: true, attributeFilter: ['class'] });
 
     button.addEventListener("click", () => {
       if (!button.disabled) {

@@ -1,0 +1,42 @@
+.header-callback-dialog-form{
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.header-callback-dialog-form label{
+	font-weight: 500;
+	font-size: 16px;
+}
+
+.header-callback-dialog-form span {
+	color: #FF6C2D;
+}
+
+.header-callback-dialog-form button{
+	width: 100%;
+}
+
+.header-callback-dialog-form custom-input {
+  width: 100%;
+  display: block;
+}
+
+.header-callback-dialog-form custom-input input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.policy-text{
+	padding: 0;
+	margin: 0;
+	font-weight: 400;
+	font-size: 14px;
+}
+
+.policy-text a {
+	color: #2581EB;
+	line-height: 22px;
+}

@@ -1,4 +1,4 @@
-import styles from  "./input.style.css?inline";
+import styles from  "./inputStyles.css?inline";
 
 if (!document.head.querySelector('style[data-custom-input]')) {
   const styleElement = document.createElement("style");

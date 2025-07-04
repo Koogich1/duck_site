@@ -1,0 +1,15 @@
+.header-layout {
+	display: flex;
+	font-family: 'Inter', Arial, sans-serif;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header-layout-logo{
+	width: 230px;
+}
+
+.header-layout-menu{
+	display: flex;
+	gap: 30px;
+}

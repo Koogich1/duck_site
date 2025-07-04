@@ -9,6 +9,7 @@
   transition: opacity 0.25s;
 }
 
+
 .dialog-backdrop.dialog-visible {
   opacity: 1;
   pointer-events: auto;
@@ -18,19 +19,25 @@
   position: fixed;
   top: 50%;
   left: 50%;
+  max-width: 417px;
+	max-height: 390px;
+  padding: 38px 38px;
   transform: translate(-50%, -48%) scale(0.98);
   background: #fff;
-  border-radius: 12px;
+  border-radius: 24px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-  min-width: 320px;
-  padding: 18px 14px;
   z-index: 1001;
-  display: block;
-  max-width: 90vw;
   overflow: auto;
   box-sizing: border-box;
   opacity: 0;
   transition: opacity 0.25s, transform 0.25s;
+}
+
+@media screen and (max-width: 768px) {
+  .dialog-window{
+    max-width: 344px;
+		max-height: 320px;
+  }  
 }
 
 .dialog-window.dialog-visible {
@@ -41,19 +48,16 @@
 ::slotted([slot="actions"]) {
   display: flex;
   justify-content: flex-end;
-  gap: 12px;
-  margin-top: 24px;
 }
 
 ::slotted([slot="content"]) {
   display: block;
-  margin-bottom: 12px;
 }
 
 .dialog-close-btn {
   position: absolute;
-  top: 18px;
-  right: 14px;
+  top: 22px;
+  right: 18px;
   width: 10px;
   height: 10px;
   background: transparent;

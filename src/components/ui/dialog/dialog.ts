@@ -1,4 +1,4 @@
-import styles from "./dialog.styles.css?inline";
+import styles from "./dialogStyles.css?inline";
 
 if (!document.head.querySelector('style[data-custom-dialog]')) {
   const styleElement = document.createElement("style");
