@@ -1,0 +1,72 @@
+:root {
+  --btn-primary-initial: #EAB308;
+  --btn-primary-hover: #FEC71C;
+  --btn-primary-pressed: #CC9500;
+  --btn-secondary-initial: #2581EB;
+  --btn-secondary-hover: #439FFF;
+  --btn-secondary-pressed: #0763CD;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 7px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: 'Jura', Arial, sans-serif;
+}
+
+/* Primary кнопка */
+.btn.primary {
+  background-color: var(--btn-primary-initial);
+  color: white;
+}
+.btn.primary:hover {
+  background-color: var(--btn-primary-hover);
+}
+.btn.primary:active {
+  background-color: var(--btn-primary-pressed);
+}
+
+/* Secondary кнопка */
+.btn.secondary {
+  background-color: var(--btn-secondary-initial);
+  color: white;
+}
+.btn.secondary:hover {
+  background-color: var(--btn-secondary-hover);
+}
+.btn.secondary:active {
+  background-color: var(--btn-secondary-pressed);
+}
+
+/* Outline кнопка */
+.btn.outline {
+  background-color: transparent;
+  border: 2px solid #007bff;
+  color: #007bff;
+}
+
+.btn.outline:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Размер по умолчанию */
+.btn.default {
+  padding: 10px 20px;
+  min-width: 156px;
+  height: 38px;
+  font-size: 16px;
+}
+
+/* Иконка (маленькая круглая кнопка) */
+.btn.icon {
+  padding: 8px;
+  border-radius: 7px;
+  font-size: 14px;
+}

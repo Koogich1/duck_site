@@ -1,0 +1,85 @@
+.dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 1000;
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s;
+}
+
+.dialog-backdrop.dialog-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dialog-window {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -48%) scale(0.98);
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  min-width: 320px;
+  padding: 18px 14px;
+  z-index: 1001;
+  display: block;
+  max-width: 90vw;
+  overflow: auto;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.25s, transform 0.25s;
+}
+
+.dialog-window.dialog-visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+::slotted([slot="actions"]) {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+::slotted([slot="content"]) {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.dialog-close-btn {
+  position: absolute;
+  top: 18px;
+  right: 14px;
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  transition: background 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog-close-icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+  stroke: #B9B9B9;
+  transition: stroke 0.15s;
+}
+
+.dialog-close-btn:hover {
+  color: #222;
+}
+
+.dialog-close-btn:hover .dialog-close-icon {
+  stroke: #222;
+}
