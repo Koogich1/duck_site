@@ -11,7 +11,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 20px;
   font-size: 16px;
   border-radius: 7px;
   border: none;
@@ -46,6 +45,8 @@
 /* Outline кнопка */
 .btn.outline {
   background-color: transparent;
+  padding: 0;
+  margin: 0;
   border: 2px solid #007bff;
   color: #007bff;
 }
@@ -125,7 +126,9 @@
 
 /* Иконка (маленькая круглая кнопка) */
 .btn.icon {
-  padding: 8px;
+  padding: 0;
+  min-width: 29px;
+  min-height: 29px;
   border-radius: 7px;
   font-size: 14px;
 }

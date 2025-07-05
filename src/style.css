@@ -5,7 +5,12 @@ html, body {
   color: #1F2937;
 }
 
+svg {
+  margin-top: 4px;
+}
+
 body {
+  min-height: 100vh;
   padding: 20px 12px;
 }
 
