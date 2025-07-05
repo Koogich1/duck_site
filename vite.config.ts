@@ -14,10 +14,16 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     sourcemap: false,
+    target: 'esnext',
+    minify: 'esbuild',
     rollupOptions: {
       output: {
         manualChunks: undefined,
       },
+      external: [],
     },
+  },
+  optimizeDeps: {
+    include: [],
   },
 });
