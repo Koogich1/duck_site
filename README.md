@@ -143,3 +143,16 @@ npm run preview
 # Деплой на GitHub Pages
 npm run deploy
 ```
+
+## 🌐 Деплой
+
+Проект настроен для автоматического деплоя на **GitHub Pages**:
+
+- ✅ **Автоматический деплой** через GitHub Actions
+- ✅ **Оптимизированная сборка** для production
+- ✅ **Правильная конфигурация** base URL
+- ✅ **Готовые скрипты** для ручного деплоя
+
+Подробная инструкция по деплою: [DEPLOYMENT.md](./DEPLOYMENT.md)
+
+**Live Demo:** `https://yourusername.github.io/tz/`
