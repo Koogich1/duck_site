@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: center;
   font-size: 16px;
-  border-radius: 7px;
+  border-radius: 11px;
   border: none;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -47,13 +47,29 @@
   background-color: transparent;
   padding: 0;
   margin: 0;
-  border: 2px solid #007bff;
-  color: #007bff;
+  border: 1px solid transparent;
+  height: 44px;
+  width: 44px;
+  color: #7c818e;
+}
+
+.btn.outline svg {
+  stroke: currentColor; 
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 0.18s;
 }
 
 .btn.outline:hover {
-  background-color: #007bff;
-  color: white;
+  background-color: white;
+  border: 1px solid var(--btn-secondary-hover);
+  color: var(--btn-secondary-hover);
+}
+
+.btn.btn.outline:active {
+  border: 1px solid var(--btn-secondary-pressed);
+  color: var(--btn-secondary-pressed);
 }
 
 .btn.menu-tab {
@@ -104,23 +120,43 @@
 .btn.menu-tab.active {
   color: #2581EB;
 }
-.btn.menu-tab.active::after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 3px;
-  border-radius: 2px;
-  background: #2581EB;
+
+/* Кнопка - ссылка */
+
+.btn.link {
+  background: transparent;
+  color: #1F2937; 
+  font-weight: 300;
+  font-size: 18px;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  display: inline-flex;
+  text-wrap: nowrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.18s;
+}
+
+.btn.link svg {
+  stroke: currentColor; 
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 0.18s;
+}
+
+.btn.link:hover,
+.btn.link:focus {
+  color: #2581EB;
 }
 
 
 /* Размер по умолчанию */
 .btn.default {
   padding: 10px 20px;
-  height: 38px;
+  height: 44px;
   font-size: 16px;
 }
 

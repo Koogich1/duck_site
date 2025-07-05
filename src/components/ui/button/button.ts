@@ -16,11 +16,11 @@ class Button extends HTMLElement {
     button.classList.add("btn");
     this._button = button;
 
-    const icon = this.querySelector('[slot="icon"]');
+    const icon = this.querySelector('[slot="icon-left"]');
     const text = this.querySelector('[slot="text"]');
     if (icon) button.appendChild(icon);
     if (text) button.appendChild(text);
-
+    
     this.appendChild(button);
 
     if (this.classList.contains('active')) {
@@ -51,7 +51,7 @@ class Button extends HTMLElement {
     const button = this._button;
     if (!button) return;
     if (name === "variant") {
-      ["primary", "secondary", "outline", "menu-tab"].forEach((cls) => button.classList.remove(cls));
+      ["primary", "secondary", "outline", "menu-tab", "link"].forEach((cls) => button.classList.remove(cls));
       if (newValue) button.classList.add(newValue);
     }
     if (name === "size") {

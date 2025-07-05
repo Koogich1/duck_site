@@ -20,29 +20,12 @@
 	gap: 5px;
 }
 
-.header-layout-button{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 38px;
-	height: 38px;
-	border-radius: 12px;
-	background-color: transparent;
-	color: white;
-	cursor: pointer;
-	transition: .2s ease;
-}
-
-.header-layout-button:hover {
-	background-color: #FEC71C66;
-}
-
 .header-layout-drawer-trigger{
 	display: none;
 	align-items: center;
 	justify-content: center;
-	width: 38px;
-	height: 38px;
+	width: 44px;
+	height: 44px;
 	border-radius: 8px;
 	border: 1px solid var(--btn-primary-initial);
 	background-color: transparent;
@@ -60,7 +43,12 @@
 }
 
 .header-layout-drawer-trigger:hover {
-	background-color: #FEC71C66;
+	background-color: var(--btn-primary-hover);
+	border-color: var(--btn-primary-hover);
+}
+
+.header-layout-drawer-trigger:active{
+	background-color: var(--btn-primary-pressed);
 }
 
 .header-layout-drawer-content{

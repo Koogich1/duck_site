@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Jura:wght@300;400;500;600;700&display=swap');
 
-html, body {
+html {
   font-family: 'Inter', Arial, sans-serif;
   color: #1F2937;
+  position: relative;
+  overflow-x: hidden;
 }
 
 svg {
@@ -10,7 +12,10 @@ svg {
 }
 
 body {
+  position: relative;
+  overflow: hidden;
   min-height: 100vh;
+  margin: 0;
   padding: 20px 12px;
 }
 
