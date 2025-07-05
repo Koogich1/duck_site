@@ -139,3 +139,7 @@ npm run build
 
 # Предпросмотр build
 npm run preview
+
+# Деплой на GitHub Pages
+npm run deploy
+```
